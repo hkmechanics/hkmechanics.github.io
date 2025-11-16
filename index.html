@@ -127,6 +127,49 @@
         box-shadow: 0 14px 28px rgba(56, 189, 248, 0.35);
       }
 
+      .mascot-strip {
+        margin-bottom: 28px;
+        border-radius: 18px;
+        overflow: hidden;
+        border: 1px solid rgba(15, 23, 42, 0.9);
+        box-shadow: 0 26px 60px rgba(15, 23, 42, 0.95);
+        background: radial-gradient(
+            circle at top,
+            rgba(56, 189, 248, 0.15),
+            transparent 60%
+          ),
+          linear-gradient(145deg, #020617, #020617);
+      }
+
+      .mascot-strip-inner {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .mascot-strip-item {
+        position: relative;
+        height: 260px;
+        overflow: hidden;
+      }
+
+      .mascot-strip-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        filter: grayscale(55%) contrast(1.1) brightness(0.9);
+        transform: scale(1.04);
+      }
+
+      .mascot-strip-item:nth-child(2) img {
+        filter: grayscale(70%) contrast(1.25) brightness(0.85);
+        transform: scale(1.08) translateY(4px);
+      }
+
+      .mascot-strip-item:nth-child(3) img {
+        filter: grayscale(45%) contrast(1.2) saturate(1.2);
+      }
+
       main {
         display: grid;
         grid-template-columns: minmax(0, 3fr) minmax(0, 2.4fr);
@@ -398,6 +441,19 @@
           gap: 10px;
         }
 
+        .mascot-strip {
+          margin-bottom: 20px;
+          box-shadow: 0 18px 40px rgba(15, 23, 42, 0.9);
+        }
+
+        .mascot-strip-inner {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .mascot-strip-item {
+          height: 220px;
+        }
+
         main {
           grid-template-columns: minmax(0, 1fr);
           gap: 24px;
@@ -443,6 +499,29 @@
           <a href="mailto:you@example.com" class="primary">Contact</a>
         </nav>
       </header>
+
+      <section class="mascot-strip" id="mascot">
+        <div class="mascot-strip-inner">
+          <div class="mascot-strip-item">
+            <img
+              src="src/images/rabbit0.jpg"
+              alt="HK Mechanics mascot rabbit, first sketch cropped close."
+            />
+          </div>
+          <div class="mascot-strip-item">
+            <img
+              src="src/images/rabbit1.png"
+              alt="HK Mechanics mascot rabbit, layered shapes and harsh rhythm."
+            />
+          </div>
+          <div class="mascot-strip-item">
+            <img
+              src="src/images/rabbit2.png"
+              alt="HK Mechanics mascot rabbit, soft colours with slightly uneasy balance."
+            />
+          </div>
+        </div>
+      </section>
 
       <main>
         <section class="hero">
@@ -573,43 +652,6 @@
             </div>
           </div>
 
-          <div id="mascot" class="section-label">Studio Mascot</div>
-          <div class="mascot-gallery">
-            <figure class="mascot-card">
-              <img
-                class="mascot-image"
-                src="src/images/rabbit0.jpg"
-                alt="HK Mechanics studio mascot, quiet rabbit drawn with simple mechanical lines."
-              />
-              <figcaption class="mascot-caption">
-                First sketch of the studio mascot, used to test gentle motion
-                and character.
-              </figcaption>
-            </figure>
-            <figure class="mascot-card">
-              <img
-                class="mascot-image"
-                src="src/images/rabbit1.png"
-                alt="HK Mechanics studio mascot, rabbit with layered shapes and mechanical rhythm."
-              />
-              <figcaption class="mascot-caption">
-                Digital interpretation exploring layers, rhythm, and small
-                mechanical details.
-              </figcaption>
-            </figure>
-            <figure class="mascot-card">
-              <img
-                class="mascot-image"
-                src="src/images/rabbit2.png"
-                alt="HK Mechanics studio mascot, rabbit in soft colors and structural lines."
-              />
-              <figcaption class="mascot-caption">
-                Color study that connects drawing, structure, and the feeling of
-                slow movement.
-              </figcaption>
-            </figure>
-          </div>
-
           <div class="github-cta">
             More mechanics and experiments on
             <a
@@ -644,4 +686,3 @@
     </script>
   </body>
 </html>
-
