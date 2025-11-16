@@ -3,21 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Your Name | Portfolio</title>
+    <title>HK Mechanics | Mechanical Art &amp; Motion</title>
     <meta
       name="description"
-      content="Brief portfolio and GitHub highlights for Your Name."
+      content="Mechanical art, motion drawings, and engineered pieces by HK Mechanics."
     />
     <style>
       :root {
         --bg: #050816;
-        --bg-alt: #0f172a;
+        --bg-alt: #0b1220;
         --accent: #38bdf8;
-        --accent-soft: rgba(56, 189, 248, 0.15);
+        --accent-soft: rgba(56, 189, 248, 0.16);
         --text: #e5e7eb;
         --text-muted: #9ca3af;
-        --border-subtle: rgba(148, 163, 184, 0.4);
-        --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.75);
+        --border-subtle: rgba(148, 163, 184, 0.5);
+        --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.8);
       }
 
       * {
@@ -29,7 +29,7 @@
         min-height: 100vh;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
           sans-serif;
-        background: radial-gradient(circle at top left, #1d283a 0, #020617 55%);
+        background: radial-gradient(circle at top left, #1f2937 0, #020617 55%);
         color: var(--text);
         -webkit-font-smoothing: antialiased;
       }
@@ -40,7 +40,7 @@
       }
 
       .page {
-        max-width: 960px;
+        max-width: 1040px;
         margin: 0 auto;
         padding: 32px 20px 40px;
       }
@@ -49,8 +49,8 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 32px;
         gap: 12px;
+        margin-bottom: 32px;
       }
 
       .brand {
@@ -60,8 +60,8 @@
       }
 
       .brand-mark {
-        width: 32px;
-        height: 32px;
+        width: 34px;
+        height: 34px;
         border-radius: 10px;
         background: conic-gradient(
           from 140deg,
@@ -83,7 +83,8 @@
         justify-content: center;
         color: var(--accent);
         font-weight: 700;
-        font-size: 16px;
+        font-size: 13px;
+        letter-spacing: 0.08em;
       }
 
       .brand-text-main {
@@ -126,15 +127,11 @@
         box-shadow: 0 14px 28px rgba(56, 189, 248, 0.35);
       }
 
-      .nav-links a.primary:hover {
-        filter: brightness(1.05);
-      }
-
       main {
         display: grid;
-        grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
-        gap: 28px;
-        align-items: start;
+        grid-template-columns: minmax(0, 3fr) minmax(0, 2.4fr);
+        gap: 32px;
+        align-items: flex-start;
       }
 
       .hero {
@@ -181,6 +178,7 @@
       }
 
       .headline span {
+        display: block;
         background: linear-gradient(135deg, #38bdf8, #a855f7);
         -webkit-background-clip: text;
         color: transparent;
@@ -190,7 +188,7 @@
         font-size: 14px;
         color: var(--text-muted);
         max-width: 34rem;
-        margin-bottom: 18px;
+        margin: 0 0 14px;
       }
 
       .hero-meta {
@@ -199,6 +197,7 @@
         font-size: 12px;
         color: var(--text-muted);
         flex-wrap: wrap;
+        margin-top: 8px;
       }
 
       .meta-pill {
@@ -327,11 +326,44 @@
       .github-cta {
         font-size: 12px;
         color: var(--text-muted);
-        margin-top: 4px;
+        margin-top: 6px;
       }
 
       .github-cta a {
         color: var(--accent);
+      }
+
+      .mascot-gallery {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .mascot-card {
+        border-radius: 12px;
+        padding: 8px;
+        background: radial-gradient(
+            circle at top,
+            rgba(248, 250, 252, 0.04),
+            transparent 55%
+          ),
+          linear-gradient(145deg, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 0.9));
+        border: 1px solid rgba(148, 163, 184, 0.6);
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .mascot-image {
+        width: 100%;
+        border-radius: 8px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .mascot-caption {
+        font-size: 11px;
+        color: var(--text-muted);
       }
 
       footer {
@@ -368,14 +400,15 @@
 
         main {
           grid-template-columns: minmax(0, 1fr);
-        }
-
-        .projects-panel {
-          margin-top: 4px;
+          gap: 24px;
         }
 
         .headline {
           font-size: 26px;
+        }
+
+        .mascot-gallery {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
         }
       }
 
@@ -394,16 +427,17 @@
       <header>
         <div class="brand">
           <div class="brand-mark">
-            <div class="brand-mark-inner">Y</div>
+            <div class="brand-mark-inner">HK</div>
           </div>
           <div>
-            <div class="brand-text-main">Your Name</div>
-            <div class="brand-text-sub">Developer · Builder · Learner</div>
+            <div class="brand-text-main">HK Mechanics</div>
+            <div class="brand-text-sub">Mechanical Art · Motion &amp; Drawing</div>
           </div>
         </div>
         <nav class="nav-links">
-          <a href="#projects">Projects</a>
-          <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank"
+          <a href="#works">Works</a>
+          <a href="#mascot">Mascot</a>
+          <a href="https://github.com/hkmechanics" target="_blank" rel="noreferrer"
             >GitHub</a
           >
           <a href="mailto:you@example.com" class="primary">Contact</a>
@@ -412,48 +446,50 @@
 
       <main>
         <section class="hero">
-          <div class="eyebrow">GitHub Portfolio</div>
+          <div class="eyebrow">Mechanical Art Studio</div>
           <h1 class="headline">
-            Building small, focused
-            <span>projects</span>
-            that ship.
+            Mechanical motion drawn by hand,
+            <span>built like an instrument.</span>
           </h1>
           <p class="subheadline">
-            I enjoy designing and coding clean, pragmatic solutions — from tiny
-            tools to polished web apps. Here are a few highlights from my
-            GitHub work.
+            I create mechanical pieces where engineering and drawing meet: slow
+            repeating motions, gentle rhythms, and small machines that feel
+            alive.
+          </p>
+          <p class="subheadline">
+            Each work begins as a sketch of movement, then becomes a mechanism,
+            a light, or a quiet object in space.
           </p>
           <div class="hero-meta">
             <div class="meta-pill">
               <span class="meta-dot"></span>
-              <span class="meta-accent">Available for interesting projects</span>
+              <span class="meta-accent">Mechanical art · Motion studies</span>
             </div>
             <div class="meta-pill">
-              <span>Open source&nbsp;·&nbsp;Learning in public</span>
+              <span
+                >Drawing&nbsp;·&nbsp;Mechanism
+                design&nbsp;·&nbsp;Studio experiments</span
+              >
             </div>
           </div>
         </section>
 
-        <aside class="projects-panel" id="projects">
-          <div class="section-label">Selected Projects</div>
+        <aside class="projects-panel" id="works">
+          <div class="section-label">Mechanical Works</div>
           <div class="projects-list">
-            <a
-              class="project-card"
-              href="https://github.com/YOUR_GITHUB_USERNAME/PROJECT_ONE"
-              target="_blank"
-            >
+            <div class="project-card">
               <div class="project-title-row">
-                <div class="project-name">Project One</div>
-                <div class="project-tag">Featured</div>
+                <div class="project-name">Tabletop Mechanics</div>
+                <div class="project-tag">Drawing → Mechanism</div>
               </div>
               <div class="project-desc">
-                One-sentence description of your main project. What problem does
-                it solve and who is it for?
+                Small pieces where hand-drawn lines become quiet rotating,
+                sliding, and pulsing mechanisms on the table.
               </div>
               <div class="project-meta-row">
-                <div class="project-tech">TypeScript · React · Vite</div>
+                <div class="project-tech">Sketches · Prototypes · Micro motors</div>
                 <div class="project-link">
-                  <span>View on GitHub</span>
+                  <span>See experiments</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -469,25 +505,21 @@
                   </svg>
                 </div>
               </div>
-            </a>
+            </div>
 
-            <a
-              class="project-card"
-              href="https://github.com/YOUR_GITHUB_USERNAME/PROJECT_TWO"
-              target="_blank"
-            >
+            <div class="project-card">
               <div class="project-title-row">
-                <div class="project-name">Project Two</div>
-                <div class="project-tag">Tooling</div>
+                <div class="project-name">Wall Pieces</div>
+                <div class="project-tag">Rhythm</div>
               </div>
               <div class="project-desc">
-                Short summary of another project — maybe a CLI, automation
-                script, or experiment you’re proud of.
+                Mounted works that slowly repeat a motion, like breathing,
+                swinging, or tracing a path as if drawing on the wall.
               </div>
               <div class="project-meta-row">
-                <div class="project-tech">Python · CLI</div>
+                <div class="project-tech">Linkages · Weight · Balance</div>
                 <div class="project-link">
-                  <span>View on GitHub</span>
+                  <span>Documented in process</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -503,25 +535,26 @@
                   </svg>
                 </div>
               </div>
-            </a>
+            </div>
 
-            <a
-              class="project-card"
-              href="https://github.com/YOUR_GITHUB_USERNAME/PROJECT_THREE"
-              target="_blank"
-            >
+            <div class="project-card">
               <div class="project-title-row">
-                <div class="project-name">Project Three</div>
-                <div class="project-tag">Experiment</div>
+                <div class="project-name">Studio Experiments</div>
+                <div class="project-tag">Process</div>
               </div>
               <div class="project-desc">
-                A concise description of an experimental or learning project
-                that shows what you’re currently exploring.
+                Ongoing mechanical tests, controllers, and code that support
+                future installations and pieces.
               </div>
               <div class="project-meta-row">
-                <div class="project-tech">Go · APIs</div>
-                <div class="project-link">
-                  <span>View on GitHub</span>
+                <div class="project-tech">Electronics · Control · Code</div>
+                <a
+                  class="project-link"
+                  href="https://github.com/hkmechanics"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span>Visit GitHub</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -535,24 +568,68 @@
                       d="M13.5 4.5H19.5M19.5 4.5V10.5M19.5 4.5L12 12M8.25 7.5H6.75C5.64543 7.5 4.8 8.34543 4.8 9.45V16.05C4.8 17.1546 5.64543 18 6.75 18H13.35C14.4546 18 15.3 17.1546 15.3 16.05V14.55"
                     />
                   </svg>
-                </div>
+                </a>
               </div>
-            </a>
+            </div>
           </div>
+
+          <div id="mascot" class="section-label">Studio Mascot</div>
+          <div class="mascot-gallery">
+            <figure class="mascot-card">
+              <img
+                class="mascot-image"
+                src="src/images/rabbit0.jpg"
+                alt="HK Mechanics studio mascot, quiet rabbit drawn with simple mechanical lines."
+              />
+              <figcaption class="mascot-caption">
+                First sketch of the studio mascot, used to test gentle motion
+                and character.
+              </figcaption>
+            </figure>
+            <figure class="mascot-card">
+              <img
+                class="mascot-image"
+                src="src/images/rabbit1.png"
+                alt="HK Mechanics studio mascot, rabbit with layered shapes and mechanical rhythm."
+              />
+              <figcaption class="mascot-caption">
+                Digital interpretation exploring layers, rhythm, and small
+                mechanical details.
+              </figcaption>
+            </figure>
+            <figure class="mascot-card">
+              <img
+                class="mascot-image"
+                src="src/images/rabbit2.png"
+                alt="HK Mechanics studio mascot, rabbit in soft colors and structural lines."
+              />
+              <figcaption class="mascot-caption">
+                Color study that connects drawing, structure, and the feeling of
+                slow movement.
+              </figcaption>
+            </figure>
+          </div>
+
           <div class="github-cta">
-            More on
-            <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank"
-              >github.com/YOUR_GITHUB_USERNAME</a
+            More mechanics and experiments on
+            <a
+              href="https://github.com/hkmechanics"
+              target="_blank"
+              rel="noreferrer"
+              >github.com/hkmechanics</a
             >.
           </div>
         </aside>
       </main>
 
       <footer>
-        <div>© <span id="year"></span> Your Name</div>
+        <div>© <span id="year"></span> HK Mechanics</div>
         <div class="footer-links">
           <a href="mailto:you@example.com">Email</a>
-          <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank"
+          <a
+            href="https://github.com/hkmechanics"
+            target="_blank"
+            rel="noreferrer"
             >GitHub</a
           >
         </div>
